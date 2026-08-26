@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Neco\\k24cnt1_netcome\\kvhhlesson1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{41D1F9E2-3D62-4A84-A7FD-85E767F23025}|kvhhlesson1\\kvhhlesson1.csproj|d:\\neco\\k24cnt1_netcome\\kvhhlesson1\\kvhhlesson1\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41D1F9E2-3D62-4A84-A7FD-85E767F23025}|kvhhlesson1\\kvhhlesson1.csproj|solutionrelative:kvhhlesson1\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41D1F9E2-3D62-4A84-A7FD-85E767F23025}|kvhhlesson1\\kvhhlesson1.csproj|d:\\neco\\k24cnt1_netcome\\kvhhlesson1\\kvhhlesson1\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41D1F9E2-3D62-4A84-A7FD-85E767F23025}|kvhhlesson1\\kvhhlesson1.csproj|solutionrelative:kvhhlesson1\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "D:\\Neco\\k24cnt1_netcome\\kvhhlesson1\\kvhhlesson1\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "kvhhlesson1\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "D:\\Neco\\k24cnt1_netcome\\kvhhlesson1\\kvhhlesson1\\Views\\Home\\Privacy.cshtml*",
+              "RelativeToolTip": "kvhhlesson1\\Views\\Home\\Privacy.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-26T00:29:07.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\Neco\\k24cnt1_netcome\\kvhhlesson1\\kvhhlesson1\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "kvhhlesson1\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\Neco\\k24cnt1_netcome\\kvhhlesson1\\kvhhlesson1\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "kvhhlesson1\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-26T00:28:26.228Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
