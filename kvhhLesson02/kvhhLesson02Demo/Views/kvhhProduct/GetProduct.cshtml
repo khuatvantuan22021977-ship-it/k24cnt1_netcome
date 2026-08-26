@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "GetProduct";
+}
+
+<h1>GetProduct</h1>
+<h2> du lieu lay tu ViewData</h2>
+@{
+    var ProductVD = ViewData["ProductVD"] as kvhhLesson02Demo.Models.kvhhProduct;
+}
+<div class="alert alert-danger">
+    <p> Ma: @ProductVD.ProductId</p>
+    <p> ten: @ProductVD.ProductName</p>
+    <p> Nam: @ProductVD.YearRelease</p>
+    <p>Gia: @ProductVD.Price</p>
+</div>
+<hr/>
+<h2>Lay du lieu tu ViewBag</h2>
+<div class="alert alert-danger">
+    <p> Ma: @ViewBag.productVB.ProductId</p>
+    <p> ten: @ViewBag.productVB.ProductName</p>
+    <p> Nam: @ViewBag.productVB.YearRelease</p>
+    <p>Gia: @ViewBag.productVB.Price</p>
+</div>
