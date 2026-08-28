@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Danh sach san pham";
+
+    var products = ViewData["products"] as List<kvhhLesson03.Models.kvhhProduct>;
+    int stt=0;
+}
+
+<h1>kvhhGetAllProduct</h1>
+<div class="card">
+    <div class="card-header">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                   <th>#</th>
+                   <th>ID</th>
+                   <th>Name</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(kvhhProduct item in products)
+                {
+                    stt++;
+                    <tr>
+                        <td>@stt</td>
+                       <td>@item.kvhhProductId</td>
+                        <td>@item.kvhhProductName</td>
+                        <td>@item.kvhhYearRelease</td>
+                        <td>@item.kvhhPrice</td>
+                        <td>
+                            <a href="#">Xem</a>
+                            <a href="#">Sua</a>
+                            <a href="#">xoa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="6">tong so san pham: @products.Count</th>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+</div>
