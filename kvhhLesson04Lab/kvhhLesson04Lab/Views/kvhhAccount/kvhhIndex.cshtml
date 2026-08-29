@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Danh sach tai khoan";
+    var kvhhAccounts = ViewBag.kvhhAccounts;
+}
+
+<div class="row">
+    @foreach (kvhhAccount item in kvhhAccounts)
+    {
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="img-fluid">
+                        <img src="@item.Anime" alt="@item.Name"
+                             style="width: 150px; height: 150px; object-fit: cover;" />
+                    </div>
+
+                    <div>
+                        <h3>@item.Name</h3>
+                        <p>@item.Bio</p>
+
+                        <a href="#" class="btn btn-success btn-block">
+                            Profile
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
