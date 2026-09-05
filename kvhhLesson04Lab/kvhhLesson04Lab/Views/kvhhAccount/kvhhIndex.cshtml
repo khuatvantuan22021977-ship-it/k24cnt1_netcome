@@ -6,23 +6,39 @@
 <div class="row">
     @foreach (kvhhAccount item in kvhhAccounts)
     {
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">
 
-                    <div class="img-fluid">
-                        <img src="@item.Anime" alt="@item.Name"
-                             style="width: 150px; height: 150px; object-fit: cover;" />
+                    <div class="text-center">
+                        <img src="@item.Anime"
+                             alt="@item.Name"
+                             style="width:150px; height:150px; object-fit:cover;" />
                     </div>
 
-                    <div>
-                        <h3>@item.Name</h3>
-                        <p>@item.Bio</p>
+                    <h3>@item.Name</h3>
 
-                        <a href="#" class="btn btn-success btn-block">
-                            Profile
-                        </a>
-                    </div>
+                    <p><strong>Email:</strong> @item.Email</p>
+
+                    <p><strong>Phone:</strong> @item.Phone</p>
+
+                    <p><strong>Address:</strong> @item.Address</p>
+
+                    <p><strong>Bio:</strong> @item.Bio</p>
+
+                    <p>
+                        <strong>Gender:</strong>
+                        @(item.Gender == 0 ? "Nữ" : "Nam")
+                    </p>
+
+                    <p>
+                        <strong>Birthday:</strong>
+                        @item.Birthday.ToString("dd/MM/yyyy")
+                    </p>
+
+                    <a href="#" class="btn btn-success">
+                        Hồ sơ
+                    </a>
 
                 </div>
             </div>
