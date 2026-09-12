@@ -1,0 +1,64 @@
+@model IEnumerable<kvhhLesson07Models.Models.DataModels.kvhhMember>
+
+@{
+    ViewData["Title"] = "Danh sách thành viên";
+}
+
+<div class="card p-3">
+    <h1>@ViewData["Title"]</h1>
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary my-1">Thêm mới</a>
+    </p>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.kvhhMemberId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.kvhhUserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.kvhhPassword)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.kvhhFullName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.kvhhEmail)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.kvhhMemberId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.kvhhUserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.kvhhPassword)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.kvhhFullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.kvhhEmail)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

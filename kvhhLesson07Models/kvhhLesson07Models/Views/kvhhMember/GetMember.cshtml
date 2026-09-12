@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Thông  tin member";
+    var member = Model as kvhhLesson07Models.Models.DataModels.kvhhMember;
+}
+
+<div class="alert alert-info">
+    @*@<h1>@ViewData["Title"]</h1>
+    <p>Member id: @ViewBag.Member.kvhhMemberId</p>
+    <p>UserName: @ViewBag.Member.kvhhUserName</p>
+    <p>Password: @ViewBag.Member.kvhhPassword</p>
+    <p>FullName: @ViewBag.Member.kvhhFullName</p>
+    <p>Email: @ViewBag.Member.kvhhEmail</p>*@
+    <p>Memberid: @member.kvhhMemberId</p>
+    <p>UserName: @member.kvhhUserName</p>
+    <p>UserName: @member.kvhhPassword</p>
+    <p>UserName: @member.kvhhFullName</p>
+    <p>UserName: @member.kvhhEmail</p>
+
+  
+</div>

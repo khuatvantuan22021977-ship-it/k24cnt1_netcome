@@ -1,0 +1,51 @@
+@model kvhhLesson07Models.Models.DataModels.kvhhMember
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="card p-3">
+
+<h1>Thêm mới thành viên </h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="kvhhUserName" class="control-label"></label>
+                <input asp-for="kvhhUserName" class="form-control" />
+                <span asp-validation-for="kvhhUserName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="kvhhPassword" class="control-label"></label>
+                <input asp-for="kvhhPassword" class="form-control" />
+                <span asp-validation-for="kvhhPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="kvhhFullName" class="control-label"></label>
+                <input asp-for="kvhhFullName" class="form-control" />
+                <span asp-validation-for="kvhhFullName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="kvhhEmail" class="control-label"></label>
+                <input asp-for="kvhhEmail" class="form-control" />
+                <span asp-validation-for="kvhhEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group m-2">
+                <input type="submit" value="ghi lai" class="btn btn-primary" />
+                    <a asp-action="Index">quay lai</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+
+</div>
