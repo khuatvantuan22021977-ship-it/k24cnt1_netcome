@@ -1,0 +1,61 @@
+@model kvhhLesson08Models.Models.kvhhMember
+
+@{
+    ViewData["Title"] = "kvhhDelete";
+}
+
+<h1>kvhhDelete</h1>
+
+<h3>Bạn có chắc chắn muốn xóa thành viên này không?</h3>
+
+<div>
+    <h4>kvhhMember</h4>
+    <hr />
+
+    <dl class="row">
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.kvhhMemberId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.kvhhMemberId)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.kvhhUserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.kvhhUserName)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.kvhhPassword)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.kvhhPassword)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.kvhhFullName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.kvhhFullName)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.kvhhEmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.kvhhEmail)
+        </dd>
+
+    </dl>
+
+    <form asp-action="kvhhDeleted">
+        <input name="id" value="@Model.kvhhMemberId" type="hidden" />
+
+        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+
+        <a asp-action="Index">Quay lại danh sách</a>
+    </form>
+</div>
