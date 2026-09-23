@@ -1,0 +1,65 @@
+@model IEnumerable<kvhhLesson09.Models.DataModels.kvhhMember>
+
+@{
+    ViewData["Title"] = "Danh sách sinh viên ";
+}
+
+<h1>ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KvhhUserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KvhhPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KvhhEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KvhhPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KvhhFullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KvhhBirthday)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.KvhhUserName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.KvhhPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.KvhhEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.KvhhPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.KvhhFullName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.KvhhBirthday)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.KvhhMemberId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.KvhhMemberId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.KvhhMemberId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

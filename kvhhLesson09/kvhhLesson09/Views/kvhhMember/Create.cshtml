@@ -1,0 +1,70 @@
+
+@model kvhhLesson09.Models.DataViewModels.KvhhMemberRegister
+
+@{
+    ViewData["Title"] = "Thêm thành viên mới";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Đăng ký thành viên</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="KvhhUserName" class="control-label"></label>
+                <input asp-for="KvhhUserName" class="form-control" />
+                <span asp-validation-for="KvhhUserName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="KvhhPassword" class="control-label"></label>
+                <input asp-for="KvhhPassword" class="form-control" />
+                <span asp-validation-for="KvhhPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="KvhhEmail" class="control-label"></label>
+                <input asp-for="KvhhEmail" class="form-control" />
+                <span asp-validation-for="KvhhEmail" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="KvhhPhoneNumber" class="control-label"></label>
+                <input asp-for="KvhhPhoneNumber" class="form-control" />
+                <span asp-validation-for="KvhhPhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="KvhhFullName" class="control-label"></label>
+                <input asp-for="KvhhFullName" class="form-control" />
+                <span asp-validation-for="KvhhFullName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="KvhhBirthday" class="control-label"></label>
+                <input asp-for="KvhhBirthday" class="form-control" />
+                <span asp-validation-for="KvhhBirthday" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="mt-2">
+    <a asp-action="Index">Quay lại danh sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
