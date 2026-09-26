@@ -1,0 +1,215 @@
+@model kvhh2410900034_exam.Models.kvhhStudent
+
+@{
+    ViewData["Title"] = "Thêm sinh viên";
+}
+
+<div class="container mt-4">
+
+    <!-- Tiêu đề -->
+    <div class="mb-4">
+        <h2 class="text-success">
+            THÊM SINH VIÊN
+        </h2>
+
+        <p class="text-muted">
+            Nhập thông tin sinh viên mới
+        </p>
+    </div>
+
+    <!-- Form -->
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">
+                Thông tin sinh viên
+            </h4>
+        </div>
+
+        <div class="card-body">
+
+            <form asp-action="Create" method="post">
+
+                <!-- Hiển thị lỗi -->
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger mb-3">
+                </div>
+
+
+                <!-- HỌ TÊN -->
+                <div class="mb-3">
+
+                    <label asp-for="kvhhName"
+                           class="form-label fw-bold">
+                    </label>
+
+                    <input asp-for="kvhhName"
+                           class="form-control"
+                           placeholder="Nhập họ và tên sinh viên" />
+
+                    <span asp-validation-for="kvhhName"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+
+                <!-- GIỚI TÍNH -->
+                <div class="mb-3">
+
+                    <label class="form-label fw-bold">
+                        Giới tính
+                    </label>
+
+                    <div>
+
+                        <!-- Nam -->
+                        <div class="form-check form-check-inline">
+
+                            <input asp-for="kvhhGender"
+                                   class="form-check-input"
+                                   type="radio"
+                                   value="true"
+                                   id="genderMale" />
+
+                            <label class="form-check-label"
+                                   for="genderMale">
+                                Nam
+                            </label>
+
+                        </div>
+
+
+                        <!-- Nữ -->
+                        <div class="form-check form-check-inline">
+
+                            <input asp-for="kvhhGender"
+                                   class="form-check-input"
+                                   type="radio"
+                                   value="false"
+                                   id="genderFemale" />
+
+                            <label class="form-check-label"
+                                   for="genderFemale">
+                                Nữ
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <span asp-validation-for="kvhhGender"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+
+                <!-- NGÀY SINH -->
+                <div class="mb-3">
+
+                    <label asp-for="kvhhBirthDay"
+                           class="form-label fw-bold">
+                    </label>
+
+                    <input asp-for="kvhhBirthDay"
+                           type="date"
+                           class="form-control" />
+
+                    <span asp-validation-for="kvhhBirthDay"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="mb-3">
+
+                    <label asp-for="kvhhEmail"
+                           class="form-label fw-bold">
+                    </label>
+
+                    <input asp-for="kvhhEmail"
+                           type="email"
+                           class="form-control"
+                           placeholder="example@gmail.com" />
+
+                    <span asp-validation-for="kvhhEmail"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+
+                <!-- SỐ ĐIỆN THOẠI -->
+                <div class="mb-3">
+
+                    <label asp-for="kvhhPhone"
+                           class="form-label fw-bold">
+                    </label>
+
+                    <input asp-for="kvhhPhone"
+                           type="text"
+                           class="form-control"
+                           placeholder="Nhập số điện thoại" />
+
+                    <span asp-validation-for="kvhhPhone"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+
+                <!-- TRẠNG THÁI -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-bold">
+                        Trạng thái
+                    </label>
+
+                    <div class="form-check">
+
+                        <input asp-for="kvhhActive"
+                               class="form-check-input"
+                               type="checkbox" />
+
+                        <label asp-for="kvhhActive"
+                               class="form-check-label">
+                            Hoạt động
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <div>
+
+                    <button type="submit"
+                            class="btn btn-success">
+                        Thêm sinh viên
+                    </button>
+
+                    <a asp-action="Index"
+                       class="btn btn-secondary ms-2">
+                        Quay lại
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

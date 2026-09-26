@@ -1,0 +1,183 @@
+@model kvhh2410900034_exam.Models.kvhhStudent
+
+@{
+    ViewData["Title"] = "Chi tiết sinh viên";
+}
+
+<div class="container mt-4">
+
+    <!-- Tiêu đề -->
+    <div class="mb-4">
+        <h2 class="text-info">
+            CHI TIẾT SINH VIÊN
+        </h2>
+
+        <p class="text-muted">
+            Thông tin chi tiết của sinh viên
+        </p>
+    </div>
+
+
+    <!-- Card -->
+    <div class="card shadow-sm">
+
+        <!-- Header -->
+        <div class="card-header bg-info text-white">
+
+            <h4 class="mb-0">
+                Thông tin sinh viên
+            </h4>
+
+        </div>
+
+
+        <!-- Body -->
+        <div class="card-body">
+
+            <dl class="row">
+
+                <!-- Họ tên -->
+                <dt class="col-sm-3">
+                    Họ tên
+                </dt>
+
+                <dd class="col-sm-9">
+
+                    <strong>
+                        @Model.kvhhName
+                    </strong>
+
+                </dd>
+
+
+                <!-- Giới tính -->
+                <dt class="col-sm-3">
+                    Giới tính
+                </dt>
+
+                <dd class="col-sm-9">
+
+                    @if (Model.kvhhGender)
+                    {
+                        <span class="badge bg-primary">
+                            Nam
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">
+                            Nữ
+                        </span>
+                    }
+
+                </dd>
+
+
+                <!-- Ngày sinh -->
+                <dt class="col-sm-3">
+                    Ngày sinh
+                </dt>
+
+                <dd class="col-sm-9">
+
+                    @Model.kvhhBirthDay.ToString("dd/MM/yyyy")
+
+                </dd>
+
+
+                <!-- Email -->
+                <dt class="col-sm-3">
+                    Email
+                </dt>
+
+                <dd class="col-sm-9">
+
+                    @if (!string.IsNullOrEmpty(Model.kvhhEmail))
+                    {
+                        @Model.kvhhEmail
+                    }
+                    else
+                    {
+                        <span class="text-muted">
+                            Chưa cập nhật
+                        </span>
+                    }
+
+                </dd>
+
+
+                <!-- Số điện thoại -->
+                <dt class="col-sm-3">
+                    Số điện thoại
+                </dt>
+
+                <dd class="col-sm-9">
+
+                    @if (!string.IsNullOrEmpty(Model.kvhhPhone))
+                    {
+                        @Model.kvhhPhone
+                    }
+                    else
+                    {
+                        <span class="text-muted">
+                            Chưa cập nhật
+                        </span>
+                    }
+
+                </dd>
+
+
+                <!-- Trạng thái -->
+                <dt class="col-sm-3">
+                    Trạng thái
+                </dt>
+
+                <dd class="col-sm-9">
+
+                    @if (Model.kvhhActive)
+                    {
+                        <span class="badge bg-success">
+                            Hoạt động
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">
+                            Không hoạt động
+                        </span>
+                    }
+
+                </dd>
+
+            </dl>
+
+
+            <hr />
+
+
+            <!-- Nút -->
+            <div class="mt-3">
+
+                <a asp-action="Edit"
+                   asp-route-id="@Model.Id"
+                   class="btn btn-warning">
+
+                    Sửa thông tin
+
+                </a>
+
+
+                <a asp-action="Index"
+                   class="btn btn-secondary ms-2">
+
+                    Quay lại
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
